@@ -106,22 +106,6 @@ export const Login: React.FC<LoginProps> = ({ onLogin }) => {
               {loading ? 'Loading...' : '🔐 Login'}
             </button>
           </form>
-          <div style={{ 
-            marginTop: '28px', 
-            fontSize: '13px', 
-            color: 'var(--text-secondary)', 
-            lineHeight: '2',
-            background: 'rgba(15, 23, 42, 0.6)',
-            padding: '20px',
-            borderRadius: '12px',
-            border: '1px solid rgba(71, 85, 105, 0.3)'
-          }}>
-            <p style={{ marginBottom: '8px', fontWeight: '700', color: 'var(--text)' }}>📋 Demo Accounts:</p>
-            <p style={{ marginBottom: '6px' }}><strong style={{ color: 'var(--primary-light)' }}>Admin:</strong> ADMIN001 / admin123</p>
-            <p style={{ marginBottom: '6px' }}><strong style={{ color: 'var(--success)' }}>Mg Mg:</strong> SFF001 / mgmg123</p>
-            <p style={{ marginBottom: '6px' }}><strong style={{ color: 'var(--warning)' }}>Su Su:</strong> SFF002 / susu123</p>
-            <p><strong style={{ color: 'var(--orange)' }}>Kyaw Kyaw:</strong> SFF003 / kyawkyaw123</p>
-          </div>
         </div>
       </div>
     </div>
