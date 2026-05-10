@@ -184,6 +184,27 @@ body {
 
 select.input {
   cursor: pointer;
+  background: rgba(15, 23, 42, 0.9);
+  border: 2px solid rgba(71, 85, 105, 0.6);
+  transition: all 0.3s ease;
+  border-radius: 16px;
+  padding: 16px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+select.input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+select.input option {
+  background: #0f172a;
+  color: var(--text);
 }
 
 .form-group {
