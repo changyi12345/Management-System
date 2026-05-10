@@ -38,6 +38,12 @@ function calculateProductFields(expireDateStr: string): { lifecycle: ProductLife
   } else if (diffDays <= 30) {
     lifecycle = "Warning";
     alertLevel = "Green";
+  } else if (diffDays <= 90) {
+    lifecycle = "Active";
+    alertLevel = "Green";
+  } else {
+    lifecycle = "Active";
+    alertLevel = "Green";
   }
 
   return { lifecycle, alertLevel, daysLeft: diffDays };
