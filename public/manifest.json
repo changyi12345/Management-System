@@ -1,0 +1,17 @@
+{
+  "name": "G&G G0018F",
+  "short_name": "G&G G0018F",
+  "description": "Expire Management System",
+  "theme_color": "#8b5cf6",
+  "background_color": "#020617",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
