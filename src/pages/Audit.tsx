@@ -1,13 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import type { User, AuditLog as AuditLogType } from '../types';
+import type { AuditLog as AuditLogType } from '../types';
 
 interface AuditProps {
-  currentUser: User;
   auditLogs: AuditLogType[];
 }
 
-export const Audit: React.FC<AuditProps> = ({ currentUser, auditLogs }) => {
+export const Audit: React.FC<AuditProps> = ({ auditLogs }) => {
   return (
     <div>
       <h1 style={{ fontSize: '28px', marginBottom: '8px', fontWeight: '800' }}>

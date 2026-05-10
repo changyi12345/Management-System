@@ -45,7 +45,13 @@ export const Dashboard: React.FC<DashboardProps> = ({ currentUser, products, use
       ? products 
       : products.filter(p => p.assignedStaffId === currentUser.id);
     
-    const alerts = [];
+    const alerts: Array<{
+      id: string;
+      type: 'critical' | 'warning' | 'alert';
+      title: string;
+      message: string;
+      product: any;
+    }> = [];
     
     relevantProducts.forEach(p => {
       if (p.lifecycle === 'Expired') {

@@ -1,14 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import * as XLSX from 'xlsx';
-import type { User, Product } from '../types';
+import type { Product } from '../types';
 
 interface ReportsProps {
-  currentUser: User;
   products: Product[];
 }
 
-export const Reports: React.FC<ReportsProps> = ({ currentUser, products }) => {
+export const Reports: React.FC<ReportsProps> = ({ products }) => {
   const exportToExcel = (type: 'daily' | 'weekly' | 'monthly' | 'all') => {
     let data;
     let filename;

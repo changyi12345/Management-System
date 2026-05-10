@@ -227,11 +227,10 @@ function App() {
       {!currentUser ? (
         <Routes>
           <Route path="/login" element={
-            <Login 
-              onLogin={handleLoginWithSave} 
-              users={users} 
-            />
-          } />
+                <Login 
+                  onLogin={handleLoginWithSave} 
+                />
+              } />
           <Route path="*" element={<Navigate to="/login" replace />} />
         </Routes>
       ) : (
@@ -280,7 +279,6 @@ function App() {
               <Route path="/reports" element={
                 currentUser.role === 'Admin' ? (
                   <Reports 
-                    currentUser={currentUser} 
                     products={products} 
                   />
                 ) : (
@@ -290,7 +288,6 @@ function App() {
               <Route path="/audit" element={
                 currentUser.role === 'Admin' ? (
                   <Audit 
-                    currentUser={currentUser} 
                     auditLogs={auditLogs} 
                   />
                 ) : (

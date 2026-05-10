@@ -3,10 +3,9 @@ import type { User } from '../types';
 
 interface LoginProps {
   onLogin: (staffId: string, password: string) => Promise<User>;
-  users: User[];
 }
 
-export const Login: React.FC<LoginProps> = ({ onLogin, users }) => {
+export const Login: React.FC<LoginProps> = ({ onLogin }) => {
   const [staffIdInput, setStaffIdInput] = useState('');
   const [passwordInput, setPasswordInput] = useState('');
   const [loading, setLoading] = useState(false);
