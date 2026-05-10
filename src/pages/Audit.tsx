@@ -24,7 +24,7 @@ export const Audit: React.FC<AuditProps> = ({ auditLogs }) => {
             <div key={log.id} style={{ padding: '12px 0', borderBottom: '1px solid var(--border)' }}>
               <div style={{ fontWeight: '600' }}>{log.action}</div>
               <div style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>
-                {log.userName} - {new Date(log.timestamp).toLocaleString()}
+                {log.userName} - {new Date(log.createdAt).toLocaleString()}
               </div>
             </div>
           ))

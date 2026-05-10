@@ -78,14 +78,11 @@ function App() {
 
   const addAuditLog = useCallback(async (action: string, productId?: string, productName?: string) => {
     if (!currentUser) return;
-    const log: AuditLog = {
-      id: Date.now().toString(),
+    const log = {
       action,
-      productId,
-      productName,
+      details: productName ? `${productName} (${productId})` : action,
       userId: currentUser.id,
-      userName: currentUser.name,
-      timestamp: new Date().toISOString()
+      userName: currentUser.name
     };
     try {
       const savedLog = await apiService.addAuditLog(log);

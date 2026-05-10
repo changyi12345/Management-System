@@ -11,7 +11,7 @@ export interface User {
   id: string;
   staffId: string;
   name: string;
-  password: string;
+  password?: string;
   role: Role;
   assignedCategory?: string;
 }
@@ -37,9 +37,10 @@ export interface AuditLog {
   action: string;
   productId?: string;
   productName?: string;
+  details?: string;
   userId: string;
   userName: string;
-  timestamp: string;
+  createdAt: string;
 }
 
 export interface Category {
